@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors Basic</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="./js/jquery.js"></script>
+    <script type="text/javascript">
+        $('document').ready(function (e) {
+            $('#process').click(function () {
+                //th1 đánh dấu đối tượng theo chỉ số chẵn lẻ
+                //   $('#boxA div:even').addClass('bg02')
+                // $('#boxA div:odd').addClass('bg01')
+
+              //  $('#boxA :even').addClass('bg02')
+               // $('#boxA :odd').addClass('bg01')
+
+                //th2 
+                $('#boxB span:even').addClass('bg02')
+                $('#boxB span:odd').addClass('bg01')
+
+                //th3 
+
+
+
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <h1 style="text-align: center; padding: 5px;">jQuery(':even :odd')</h1>
+    <center>
+        <input type="button" class="button" id="process" value="Process" />
+    </center>
+
+    <div id="boxA" class="boxA">
+        <div class="item" id="html">1.HTML</div>
+        <div class="item text2">2.CSS</div>
+        <div class="item">3.JS</div>
+        <div class="item bg01 text2">4.jQuery</div>
+    </div>
+
+    <div id="boxB" class="boxA">
+        <div class="item">1.PHP</div>
+        <p class="item ">2.ASP</p>
+        <div class="item">3.JSP</div>
+        <span class="item text2 bg01">4.Perl</span>
+        <span class="item text3">5.ASPX</span>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors Basic</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="./js/jquery.js"></script>
+    <script type="text/javascript">
+        $('document').ready(function () {
+            $('#process').click(function (e) {
+              //  .get(url,success)
+              var url,data2; 
+            //  url = 'files/file-001.html';
+              url = 'files/file-001.php';
+             $.get(url,function(data,status,jqXHR){
+console.log(data);
+             });
+
+   
+
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <center>
+       <h1>
+        jQuery.get(url[,data][,success(data,textStatus,jqXHR)][,dataType])
+       </h1>
+    </center>
+
+     <div id="info" class="info">Ready...</div> 
+    
+    <center>
+        <input type="button" class="button" id="process" value="Process"/>
+    </center>
+</body>
+
+</html>

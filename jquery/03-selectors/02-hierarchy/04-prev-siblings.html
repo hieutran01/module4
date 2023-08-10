@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors Basic</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="./js/jquery.js"></script>
+    <script type="text/javascript">
+        $('document').ready(function (e) {
+            $('#process').click(function () {
+                //th1 lấy ra nhứng pt cùng cấp nhưng chỉ lấy phía sau nó 
+                // $('#boxA ~ *').addClass('bg02')
+
+                //th2 lấy ra những phần tử cùng cấp cùng cha
+                // $('#html ~ *').addClass('bg02')
+
+
+                //th3
+                // $('#html ~ span').addClass('bg02')
+
+                  //th4
+                  $('#html ~ span.text2').addClass('bg02')
+
+
+
+
+
+
+
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <h1 style="text-align: center; padding: 5px;">jQuery('prev + siblings')</h1>
+    <center>
+        <input type="button" class="button" id="process" value="Process" />
+    </center>
+
+    <div id="boxA" class="boxA">
+        <div class="item" id="html">1.HTML</div>
+        <p class="item text2">2.CSS</p>
+        <div class="item"><center>3.JS</center></div>
+        <span class="item bg01 text2">4.jQuery</span>
+    </div>
+
+    <div id="boxB" class="boxA">
+        <div class="item">1.PHP</div>
+        <p class="item ">2.ASP</p>
+        <div class="item">3.JSP</div>
+        <span class="item text2 bg01">4.Perl</span>
+        <span class="item text3">5.ASPX</span>
+    </div>
+</body>
+
+</html>

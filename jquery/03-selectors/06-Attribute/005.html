@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors Basic</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="./js/jquery.js"></script>
+    <script type="text/javascript">
+         // tìm ở trong các thẻ div của boxA phần tt có chứa các chuổi lang
+        $('document').ready(function () {
+            /*
+            $("[a$='B']");
+            lựa chọn các phần tủ có thuộc tính [a]
+            và thuộc tính đó có giá trị là [B]
+            giá trị [B] là duy nhất 
+            */
+            $('#process').click(function (e) {
+              // tìm những pt trong boxA có title chứa chữ course 
+               $("#boxA > [title='course']").addClass('bg02');
+
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <center>
+        <h1>attribute [name="value"]</h1>
+    </center>
+
+    <div id="boxA" class="boxA">
+
+        <div class="item" title="course">
+            <h2>1. HTML</h2>
+            <p id="tmp">
+                HTML
+            </p>
+        </div>
+
+        <div class="item" title="jquery-course">
+            <h2>2. CSS</h2>
+            <p>
+                CSS
+
+            </p>
+        </div>
+
+        <div class="item" title="thejquery course">
+            <h2>3. Javascript</h2>
+            <p>
+                Javascript
+            </p>
+        </div>
+
+        <div class="item" title="the course">
+            <h2>4. jQuery</h2>
+            <p>
+                jQuery
+            </p>
+        </div>
+
+        <center>
+            <input type="button" class="button" id="process" value="Process" />
+        </center>
+</body>
+
+</html>

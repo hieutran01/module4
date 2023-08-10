@@ -1,0 +1,32 @@
+<script src="./js/jquery.js"></script>
+
+<script>
+    $(document).ready(function(){
+    $('#nguoi_dung').change(function(){
+        let nguoi_dung = $(this).val();
+        if (nguoi_dung === 'Hieu') {
+            $('#divHieu').show();
+            $('#divPhi').hide();
+
+        } else if (nguoi_dung === 'Phi') {
+            $('#divPhi').show();
+            $('#divHieu').hide();
+
+        } else {
+            $('#divHieu').hide();
+            $('#divPhi').hide();
+        }
+    });
+});
+
+
+</script>
+
+<select id="nguoi_dung">
+    <option value="">Vui lòng chọn</option>
+    <option value="Hieu">Hieu</option>
+    <option value="Phi">Phi</option>
+</select>
+
+<p id="divHieu" style="display: none;"> Đây là Hiếu </p>
+<p id="divPhi" style="display: none;"> Đây là Phi </p>

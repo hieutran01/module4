@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Basic</title>
+    <script src="./js/jquery.js"></script>
+</head>
+<body>
+    <input type="text" name="" id="ten" onkeyup="xu_ly()">
+    <p id="demo"></p>
+    <button id="btnHiden"> Hiden </button>
+    <button id="btnShow"> Show </button>
+    
+    <script>
+ function xu_ly(){
+    let ten = jQuery('#ten').val()
+    jQuery('#demo').html(ten)
+ }
+
+ jQuery('#btnHiden').click(function(){
+    jQuery('#demo').hide()
+
+})
+jQuery('#btnShow').click(function(){
+    jQuery('#demo').show()
+})
+    </script>
+</body>
+</html>

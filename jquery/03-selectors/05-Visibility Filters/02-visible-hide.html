@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors Basic</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="./js/jquery.js"></script>
+    <script type="text/javascript">
+        $('document').ready(function () {
+            $('#process').click(function (e) {
+                console.log($('#boxA > div:hidden').length);
+                console.log($('#boxA > div:visible').length);
+                // click vào sẻ hiện ra phần tử ẩn
+                $('#boxA > div:hidden').show(300);
+            });
+            // clcik vào pần tử sẻ đổi màu
+            $('#boxA > div:visible').click(function (e) {
+                $(this).addClass('bg02')
+
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <center>
+        <h1>$.show(val) - $.hide(val)</h1>
+    </center>
+
+    <div id="boxA" class="boxA">
+
+        <div class="item" style="display: none;">
+            <h2>1. HTML</h2>
+            <p id="tmp">
+                HTML
+            </p>
+        </div>
+
+        <div class="item">
+            <h2>2. CSS</h2>
+            <p>
+                CSS
+
+            </p>
+        </div>
+
+        <div class="item hide">
+            <h2>3. Javascript</h2>
+            <p>
+                Javascript
+            </p>
+        </div>
+
+        <div class="item">
+            <h2>4. jQuery</h2>
+            <p>
+                jQuery
+            </p>
+        </div>
+
+        <center>
+            <input type="button" class="button" id="process" value="Process" />
+        </center>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+.clr{
+        clear: both;
+}
+
+.left{
+    float: left;
+}
+
+.input{
+    padding: 3px;
+    border: solid 1px #333;
+}
+
+.button{
+    front-size: 12px;
+    padding: 3px;
+    border: solid 1px #333;
+}
+
+.boxA{
+    width: 600px;
+    padding: 10px;
+    margin: 20px auto;
+    border: solid 2px #F00;
+    min-height: 100px;
+}
+
+.boxA div{
+    padding: 3px;
+}
+
+.bg01{
+    background-color: #FF9;
+}

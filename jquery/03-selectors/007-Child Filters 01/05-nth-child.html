@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors Basic</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="./js/jquery.js"></script>
+    <script type="text/javascript">
+        $('document').ready(function (e) {
+            $('#process').click(function () {
+
+               //  lấy phần tử 
+             //  $('#boxA >:nth-child(1)').addClass('bg02')
+              // $('#boxB >:nth-child(1)').addClass('bg02')
+
+             //  $('#boxA >:nth-child(3)').addClass('bg02')
+             //  $('#boxB >:nth-child(3)').addClass('bg02')
+
+              // $('#boxA >:nth-child(1n)').addClass('bg02') //n:0-n | 1*0 | 1*1| 1*2
+             //  $('#boxB >:nth-child(1n)').addClass('bg02')
+
+             //  $('#boxA >:nth-child(2n)').addClass('bg02') ////n:0-n | 2*0 | 2*1| 2*2
+             //  $('#boxB >:nth-child(2n)').addClass('bg02')
+
+               $('#boxA >:nth-child(2n+1)').addClass('bg02') ////n:0-n | 2*0+1 | 2*1+1 | 2*2+1
+               $('#boxB >:nth-child(2n+1)').addClass('bg02')
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1>jQuery(':nth-child(val)')</h1>
+    </center>
+
+    <div id="boxA" class="boxA">
+        <p class="item">1. HTML</p>
+        <p class="item">2. CSS</p>
+        <p class="item">3. JS</p>
+        <p class="item">4. jQuery</p>
+    </div>
+
+    <div id="boxB" class="boxA">
+        <div class="item">1. PHP</div>
+        <p class="item">2. ASP</p>
+        <p class="item">3. JSP</p>
+        <p class="item">4. Perl</p>
+        <p class="item">5. ASPX</p>
+    </div>
+    <center>
+        <input type="button" class="button" id="process" value="Process" />
+    </center>
+</body>
+
+</html>
